@@ -34,7 +34,7 @@ function performOperation(secondInteger, secondDecimal, secondString) {
 
 // **************************************************************************************************** //
 
-// ********** Day 0: Arithmetic Operators  ********** //
+// ********** Day 1: Arithmetic Operators  ********** //
 
 // Return a number denoting the rectangle's area.
 
@@ -52,6 +52,35 @@ function getPerimeter(length, width) {
     // Write your code here
     perimeter = 2 * (length + width)
     return perimeter;
+}
+
+// **************************************************************************************************** //
+
+// ********** Day 2: Conditional Statements: Switch ********** //
+
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    const A = "aeiou";
+    const B = "bcdfg";
+    const C = "hjklm";
+    const D = "npqrstvwxyz";
+    switch(true){
+        case(A.includes(s[0])):
+        letter = "A";
+        break;
+        case(B.includes(s[0])):
+        letter = "B";
+        break;
+        case(C.includes(s[0])):
+        letter = "C";
+        break;
+        case(D.includes(s[0])):
+        letter = "D";
+        break;
+        default:;
+    }
+    return letter;
 }
 
 // **************************************************************************************************** //
