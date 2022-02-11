@@ -15,19 +15,19 @@ function greeting(parameterVariable) {
 function performOperation(secondInteger, secondDecimal, secondString) {
     // Declare a variable named 'firstInteger' and initialize with integer value 4.
     const firstInteger = 4;
-    
+
     // Declare a variable named 'firstDecimal' and initialize with floating-point value 4.0.
     const firstDecimal = 4.0;
-    
+
     // Declare a variable named 'firstString' and initialize with the string "HackerRank".
     const firstString = 'HackerRank ';
-    
+
     // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number type) on a new line.
     console.log(firstInteger + Number(secondInteger));
-    
+
     // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number type) on a new line.
     console.log(firstDecimal + Number(secondDecimal));
-    
+
     // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The variable 'firstString' must be printed first.
     console.log(firstString + secondString);
 }
@@ -56,6 +56,29 @@ function getPerimeter(length, width) {
 
 // **************************************************************************************************** //
 
+// ********** Day 1: Functions  ********** //
+
+// first way //
+function factorial(n) {
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1)
+    }
+}
+
+// second way //
+function factorial(m) {
+    let value = 1;
+    for(let i = m; i>1; i--) {
+        value *= i;
+        }
+        return finalValue;
+    } 
+
+// **************************************************************************************************** //
+
 // ********** Day 2: Conditional Statements: Switch ********** //
 
 function getLetter(s) {
@@ -65,20 +88,20 @@ function getLetter(s) {
     const B = "bcdfg";
     const C = "hjklm";
     const D = "npqrstvwxyz";
-    switch(true){
-        case(A.includes(s[0])):
-        letter = "A";
-        break;
-        case(B.includes(s[0])):
-        letter = "B";
-        break;
-        case(C.includes(s[0])):
-        letter = "C";
-        break;
-        case(D.includes(s[0])):
-        letter = "D";
-        break;
-        default:;
+    switch (true) {
+        case (A.includes(s[0])):
+            letter = "A";
+            break;
+        case (B.includes(s[0])):
+            letter = "B";
+            break;
+        case (C.includes(s[0])):
+            letter = "C";
+            break;
+        case (D.includes(s[0])):
+            letter = "D";
+            break;
+        default: ;
     }
     return letter;
 }
@@ -89,8 +112,8 @@ function getLetter(s) {
 
 function main() {
     const N = parseInt(readLine().trim(), 10);
-    if(N % 2 == 1) {console.log("Weird")}
-    if(N % 2 == 0 && N >= 2 && N <= 5) {console.log("Not Weird")}
-    if(N % 2 == 0 && N >= 6 && N <= 20) {console.log("Weird")}
-    if(N % 2 == 0 && N > 20) {console.log("Not Weird")}
+    if (N % 2 == 1) { console.log("Weird") }
+    if (N % 2 == 0 && N >= 2 && N <= 5) { console.log("Not Weird") }
+    if (N % 2 == 0 && N >= 6 && N <= 20) { console.log("Weird") }
+    if (N % 2 == 0 && N > 20) { console.log("Not Weird") }
 }
