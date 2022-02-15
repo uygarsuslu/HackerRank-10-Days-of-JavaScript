@@ -108,6 +108,27 @@ function getLetter(s) {
 
 // **************************************************************************************************** //
 
+// ********** Day 2: Loops ********** //
+
+let vowels = 'aeiuo'
+function vowelsAndConsonants(s) {
+    for (var i = 0; i < s.length; i++) {
+        if (vowels.includes(s[i])) {
+            console.log(s[i]);
+        }
+    }
+    for (var i = 0; i < s.length; i++) {
+
+        if (!vowels.includes(s[i])) {
+            console.log(s[i]);
+        }
+    }
+}
+vowelsAndConsonants("javascriptloops")
+
+
+// **************************************************************************************************** //
+
 // ********** Day 3: Intro to Conditional Statements ********** //
 
 function main() {
