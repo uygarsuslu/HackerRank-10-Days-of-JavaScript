@@ -71,11 +71,11 @@ function factorial(n) {
 // second way //
 function factorial(m) {
     let value = 1;
-    for(let i = m; i>1; i--) {
+    for (let i = m; i > 1; i--) {
         value *= i;
-        }
-        return finalValue;
-    } 
+    }
+    return finalValue;
+}
 
 // **************************************************************************************************** //
 
@@ -117,3 +117,30 @@ function main() {
     if (N % 2 == 0 && N >= 6 && N <= 20) { console.log("Weird") }
     if (N % 2 == 0 && N > 20) { console.log("Not Weird") }
 }
+
+// **************************************************************************************************** //
+
+// ********** Day 3: Arrays ********** //
+
+
+// first way //
+let nums = [2, 3, 6, 6, 5]
+function getSecondLargest(nums) {
+    let largest = nums[0];
+    let secondLargest = nums[0];
+
+    for (let i = 1; i < nums.length; i++) { //Bu döngünün amacı en büyük sayıyı bulmak.
+        if (nums[i] > largest) {
+            secondLargest = largest;
+            largest = nums[i];
+            continue;
+        }
+
+        if ((nums[i] > secondLargest) && (nums[i] < largest)) { // Bu döngünün amacı ise en büyük sayıyı kullanarak en büyük ikinci sayıyı bulmak.
+            secondLargest = nums[i];
+        }
+    }
+    return secondLargest;
+}
+
+// **************************************************************************************************** //
