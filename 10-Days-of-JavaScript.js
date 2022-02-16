@@ -165,3 +165,18 @@ function getSecondLargest(nums) {
 }
 
 // **************************************************************************************************** //
+
+// ********** Day 3: Try, Catch, and Finally ********** //
+
+s = "1234";
+function reverseString(s) {
+  try {
+    s = s.split("").reverse().join(""); // böl, ters çevir, birleştir
+  } catch (exception) {
+    // exception burda temsili yani beklediğimiz hatayı temsil eder "error" da yazabilirdik
+    console.log("s.split is not a function"); // hata var ise console'a bu raporu yazdır soruda böyle istiyor
+  } finally {
+    console.log(s); // hata var ise hata raporundan sonra da orjinal dize yazılsın, hata yok ise sadece dize yazılsın   
+  }
+}
+console.log(reverseString(s));
